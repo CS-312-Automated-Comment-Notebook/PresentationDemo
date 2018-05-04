@@ -22,7 +22,7 @@ def my_form_post():
     commdic = comment(text)
     repComms('user.py',commdic) # autocommenting 
     autoDocGenerator('user.py', type) # autodocing and jupyter notebooks generation
-    return render_template("index.html")
+    return render_template("new.html")
 
 if __name__ == '__main__':
     app.debug = True

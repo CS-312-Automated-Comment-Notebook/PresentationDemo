@@ -17,35 +17,14 @@
 			<!-- Header -->
 				<div id="header-wrapper">
 					<!-- Logo -->
-					<br><br><br><br>
+					<br><br><br><br><br><br><br>
 							<img src="/static/logo.png">
 							<br><br><br><br>
-					</div>
-				</div>
-				<br>
-				<br>
 
-				  <center><h2>Enter Your Script Here</h2>
 
-				  <!--Put the main code here-->
-				    <h5>
-				    <form action="." id="textform" method="POST">
-				    <textarea type="text" name="TEXTAR" rows="8" cols="70">enter script here</textarea>
-				    <textarea type="text" name="TEXTAR1">pdf</textarea>
-				    <br>
-				    <br>
-				    <input type="submit" name="my-form" value="AUTOCODE IT">
-				    </form>
-				    </center>
-				    </h5>
-				</div>
-				<br>
-				<br>
-				<div id="header-wrapper">
-					
 				<!-- Nav -->
 					<nav id="nav">
-						<h2>Available Formats</h2><hr>
+						<h3>Available Formats</h3>
 						<ul>
 							<li><a class="icon fa fa-file-pdf-o" style="font-size:25px;" href=""><span>PDF</span></a></li>
 							<li><a class="icon fa fa-file-code-o" style="font-size:25px;" href=""><span>HTML</span></a>
@@ -65,9 +44,34 @@
 						</ul>
 					</nav>
 					</div>
+</div>
+
+<br>
+				  <center><h2>Enter Your Script Here</h2>
+
+				  <!--Put the main code here-->
+				    <h5>
+				    <form action="." method="POST">
+				    <div class="form-group">
+				    <textarea type="text" name="TEXTAR" rows="8" cols="70">enter script here</textarea>
+				    
+				    <div class="form-group">
+				    <br>
+				      <h3><label for="formGroupExampleInput">Enter Filetype(pdf,html,slides,markdown,rst,script,notebook)</label></h3>
+				      <input type="text" size="10" class="form-control" id="formGroupExampleInput" name="TEXTAR1" placeholder="pdf">
+				    </div>
+
+				    <br>
+				    <br>
+				    <input type="submit" name="my-form" value="AUTOCODE IT">
+				    </div>
+				    </form>
+				    </center>
+				    </h5>
+
+
 				</div>
 
-<br><br><br>
 					<div id="copyright" class="container">
 							&copy; AutoCode | All rights reserved
 					</div>
