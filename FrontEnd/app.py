@@ -4,6 +4,7 @@ from flask import render_template
 from evalast import comment
 from autodocgen import autoDocGenerator
 from autocomment import repComms
+import os
 
 
 app = Flask(__name__)
@@ -21,7 +22,10 @@ def my_form_post():
       f.write (text);
     commdic = comment(text)
     repComms('user.py',commdic) # autocommenting 
+    print('Done')
     autoDocGenerator('user.py', type) # autodocing and jupyter notebooks generation
+    os.remove('user.py')
+    os.remove('user.py.ipynb')
     return render_template("new.html")
 
 if __name__ == '__main__':
