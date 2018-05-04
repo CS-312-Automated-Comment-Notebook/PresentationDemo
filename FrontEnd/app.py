@@ -1,6 +1,10 @@
 from flask import Flask
 from flask import request
 from flask import render_template
+from evalast import comment
+from autodocgen import autoDocGenerator
+from autocomment import repComms
+
 
 app = Flask(__name__)
 
@@ -10,13 +14,15 @@ def my_form():
 
 @app.route('/', methods=['POST'])
 def my_form_post():
-
-    text = request.form['text']
-    subject = request.form['subject']
-    processed_subject=subject.lower()
-    processed_text = text.upper()
-    processed_text1 = text.lower()
-    return render_template("new.html",processed_text=processed_text,processed_text1=processed_text1,processed_subject=processed_subject)
+    text = request.form['TEXTAR']
+    text1 = request.form['TEXTAR1']
+    type=text1
+    with open ('user.py', "w") as f:
+      f.write (text);
+    commdic = comment(text)
+    repComms('user.py',commdic) # autocommenting 
+    autoDocGenerator('user.py', type) # autodocing and jupyter notebooks generation
+    return render_template("index.html")
 
 if __name__ == '__main__':
     app.debug = True

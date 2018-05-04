@@ -5,47 +5,38 @@
 		<title>AutoCode</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="static/main.css">
-		<script src="static/assets/js/javascript.js"></script>
-
-</head>
-
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	</head>
 
 	<body class="homepage">
 		<div id="page-wrapper">
 
 			<!-- Header -->
 				<div id="header-wrapper">
-					<!-- Logo -->
-					<br><br><br><br>
-							<img src="/static/logo.png">
-							<br><br><br><br>
+					<div id="header" class="container">
+
+						<!-- Logo -->
+							<h1 id="logo"><a href="index.html">AUTO CODE</a></h1>
+							<p>Automated Comment and Notebook Generation for Python Code</p>
+
 					</div>
 				</div>
+
+				<div class="container">
+
 				<br>
 				<br>
 
-				  <center><h2>Enter Your Script Here</h2>
-
-				  <!--Put the main code here-->
-				    <h5>
-				    <form action="." id="textform" method="POST">
-				    <textarea type="text" name="TEXTAR" rows="8" cols="70">enter script here</textarea>
-				    <textarea type="text" name="TEXTAR1">pdf</textarea>
-				    <br>
-				    <br>
-				    <input type="submit" name="my-form" value="AUTOCODE IT">
-				    </form>
-				    </center>
+				    <code class="prettyprint" >cout<<"Hello";</code>
 				    </h5>
 				</div>
 				<br>
 				<br>
 				<div id="header-wrapper">
-					
+					<div id="header" class="container">
 				<!-- Nav -->
 					<nav id="nav">
-						<h2>Available Formats</h2><hr>
 						<ul>
 							<li><a class="icon fa fa-file-pdf-o" style="font-size:25px;" href=""><span>PDF</span></a></li>
 							<li><a class="icon fa fa-file-code-o" style="font-size:25px;" href=""><span>HTML</span></a>
@@ -67,22 +58,13 @@
 					</div>
 				</div>
 
-<br><br><br>
+
 					<div id="copyright" class="container">
 							&copy; AutoCode | All rights reserved
 					</div>
-					<br><br>
 				</div>
 
 		</div>
-<script>
-    window.onload = function() {
-        CodeFlask.run('.code-editor', 'javascript')
-    };
-</script>
-
-<script src="static/codeflask.js"></script>
-<script src="static/vendor/prism.min.js"></script>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
